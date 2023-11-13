@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { Todo } from '../todo';
 @Component({
   selector: 'app-todo-detail',
   templateUrl: './todo-detail.component.html',
-  styleUrls: ['./todo-detail.component.css']
+  styleUrls: ['./todo-detail.component.css'],
 })
-export class TodoDetailComponent {
-
+export class TodoDetailComponent implements OnInit {
+  @Input() todo: Todo = { id: 0, name: '' };
+  constructor() {}
+  ngOnInit() {}
 }
